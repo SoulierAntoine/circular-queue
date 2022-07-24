@@ -3,5 +3,5 @@ import CircularQueue from './circular-queue';
 
 export default {
   Queue,
-  CircularQueue
+  CircularQueue,
 };

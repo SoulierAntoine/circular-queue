@@ -1,7 +1,7 @@
 {
-  "name": "circular-queue",
+  "name": "circular-queue-ts",
   "version": "1.0.0",
-  "description": "Circular queue data structure",
+  "description": "Circular queue data structure in TS",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -26,7 +26,7 @@
     "url": "https://github.com/SoulierAntoine/circular-queue/issues"
   },
   "homepage": "https://github.com/SoulierAntoine/circular-queue#readme",
-  "keywords": ["queue", "structure", "data", "list", "circular"],
+  "keywords": ["queue", "structure", "ts", "data", "list", "circular"],
   "author": "ASO",
   "license": "ISC",
   "devDependencies": {
