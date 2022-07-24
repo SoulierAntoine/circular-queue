@@ -1,12 +1,46 @@
 {
   "name": "circular-queue",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Circular queue data structure",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx jest",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "eslint \"src/**/*.ts\" --fix",
+    "build": "tsc",
+    "prepare" : "npm run build",
+    "prepublishOnly" : "npm test && npm run lint",
+    "preversion" : "npm run lint",
+    "version" : "npm run format && git add -A src",
+    "postversion" : "git push && git push --tags"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "files": [
+    "dist/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SoulierAntoine/circular-queue"
+  },
+  "bugs": {
+    "url": "https://github.com/SoulierAntoine/circular-queue/issues"
+  },
+  "homepage": "https://github.com/SoulierAntoine/circular-queue#readme",
+  "keywords": ["queue", "structure", "data", "list", "circular"],
+  "author": "ASO",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^28.1.1",
+    "jest": "^28.1.0",
+    "prettier": "^2.7.1",
+    "ts-jest": "^28.0.4",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.7.3",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0"
+  }
 }
